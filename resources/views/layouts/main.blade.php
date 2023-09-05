@@ -11,9 +11,9 @@
         <div class="container flex flex-col md:flex-row mx-auto items-center justify-between px-4 py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li>
-                    <a href="#"><img src="{{ "/storage/img/pop-corn.png" }}" width="40" height="40" alt="films artisan website logo"></a>
+                    <a href="{{ route("movies.index") }}"><img src="{{ "/storage/img/pop-corn.png" }}" width="40" height="40" alt="films artisan website logo"></a>
                 </li>
-                <li class="md:ml-12 mt-4 md:mt-0"><a href="#" class="hover:text-gray-300">Movies</a></li>
+                <li class="md:ml-12 mt-4 md:mt-0"><a href="{{ route('movies.index') }}" class="hover:text-gray-300">Movies</a></li>
                 <li class="md:ml-12 mt-4 md:mt-0"><a href="#" class="hover:text-gray-300">TV Shows</a></li>
                 <li class="md:ml-12 mt-4 md:mt-0"><a href="#" class="hover:text-gray-300">Actors</a></li>
             </ul>
