@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MoviesController;
+use App\Livewire\SearchDropdown;
 use Illuminate\Support\Facades\Route;
 
 
