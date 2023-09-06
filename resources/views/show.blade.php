@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+{{-- Movie Details Section --}}
 <div class="movie-info border-b border-gray-700">
     <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
         <img src="{{ "https://image.tmdb.org/t/p/w500/".$movie['poster_path'] }}" alt="poster" class="w-96 mx-auto md:mx-0 md: mb-4">
@@ -42,7 +43,10 @@
         </div>
     </div>
 </div>
-<div class="movie-casts container mx-auto px-4 py-16 flex">
+{{-- Movie Details End --}}
+
+{{-- Movie Casts Section --}}
+<div class="movie-casts container mx-auto px-4 py-16 flex border-b border-gray-700">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-16 mx-auto md:mx-0">
         @foreach ($movie['credits']['cast'] as $cast)
             @if ($loop->index < 5)
@@ -59,4 +63,21 @@
         @endforeach
     </div>
 </div>
+{{-- Movie Casts End --}}
+
+{{-- Movie Images Section --}}
+<div class="movie-images container mx-auto px-4 py-16 flex">
+    <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-8 md:gap-16 mx-auto md:mx-0">
+        @foreach ($movie['images']['backdrops'] as $image)
+            @if ($loop->index < 9)
+                <div class="mt-8">
+                    <a href="#">
+                        <img src="{{ "https://image.tmdb.org/t/p/w500/".$image['file_path'] }}" alt="movie image" class="hover:opacity-75 transition-ease-in-out duration-500">
+                    </a>
+                </div>
+            @endif
+        @endforeach
+    </div>
+</div>
+{{-- Movie Images End --}}
 @endsection
