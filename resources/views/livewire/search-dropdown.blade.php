@@ -3,6 +3,7 @@
     <div class="absolute top-2 left-2">
         <img src="{{ '/storage/img/search.png' }}" alt="search icon">
     </div>
+    <div wire:loading class="spinner mt-4 mr-4"></div>
     @if (strlen($search) >= 2)
         <div class="absolute bg-gray-800 text-sm rounded w-64">
             @if (count($searchResult) > 0)
