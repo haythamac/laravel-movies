@@ -7,6 +7,8 @@ A personal solo-project to improve my skills
 - Laravel
 - Tailwindcss
 - Vite
-- MySQL (?)
+- Livewire
+- Alpinejs
+- APIs
 
 This is a Full-stack Movie App
