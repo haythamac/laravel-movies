@@ -1,5 +1,9 @@
 <div class="relative mt-4 md:mt-0" x-data="{isOpen: true }" @click.away="isOpen = false">
     <input  wire:model.live.debounce.500="search"  
+        x-ref="search"
+        @keydown.window="
+            if(event.keyCode === 191){ event.preventDefault(); $refs.search.focus(); }
+        "
         @focus="isOpen = true" 
         @keydown.escape.window="isOpen = false"
         @keydown.shift.tab="isOpen = false"
